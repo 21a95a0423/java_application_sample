@@ -20,6 +20,8 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '21'
+    - name: give the permissions to mvnw
+      run: chmod +x mvnw
     - name: Build jar
       run: ./mvnw clean package -DskipTests
     - name: Docker Login
